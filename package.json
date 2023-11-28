@@ -1,0 +1,33 @@
+{
+  "name": "zaadevofc.tech",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@material-tailwind/react": "^2.1.4",
+    "@nextui-org/react": "^2.2.9",
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
+    "framer-motion": "^10.16.5",
+    "moment": "^2.29.4",
+    "npm-api": "^1.0.1",
+    "preact": "^10.19.1",
+    "react-icons": "^4.12.0",
+    "react-query": "^3.39.3",
+    "toolz": "^1.0.9-dev"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.6.0",
+    "@types/node": "^20.10.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}

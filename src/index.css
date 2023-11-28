@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Alexaniri', sans-serif;
+    /* font-family: 'Sugarpunch DEMO', sans-serif; */
+    @apply text-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black;
+}
+
+Image, img {
+    @apply select-none;
+}
+  
+.hide-scroll::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* background-color: #F5F5F5; */
+}
+
+.hide-scroll::-webkit-scrollbar-thumb {
+    border-radius: 0px !important;
+    /* background-color: rgb(16 185 129); */
+}
