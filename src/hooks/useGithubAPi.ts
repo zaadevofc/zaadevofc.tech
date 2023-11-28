@@ -149,7 +149,6 @@ const useGithubAPi = () => {
   let queryPayload: QueryPayload = { error, isError, isLoading, isSuccess, status }
 
   return { ...queryPayload, data: result }
-  // return q
 }
 
 export default useGithubAPi

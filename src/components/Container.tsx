@@ -1,21 +1,4 @@
-type Layouts = {
-  /**
-   * class components
-   */
-  class: string;
-  /**
-   * 
-   */
-  children: any;
-}
-
-/**
- *
- *
- * @param {Layouts} props
- * @return {*} 
- */
-const Container = (props: Layouts) => {
+const Container = (props: any) => {
   return (
     
     <section class={`${props.class} justify-center p-5 flex mx-auto items-center max-w-7xl`}>

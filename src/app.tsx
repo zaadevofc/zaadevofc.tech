@@ -5,9 +5,9 @@ import GithubCard from "./components/GithubCard";
 import Loading from "./components/Loading";
 import NPMCard from "./components/NPMCard";
 import ProjectCard from "./components/ProjectCard";
-import useGithubAPi from "./query/useGithubAPi";
-import useListing from "./query/useListing";
-import useNpmAPi from "./query/useNpmAPi";
+import useGithubAPi from "./hooks/useGithubAPi";
+import useListing from "./hooks/useListing";
+import useNpmAPi from "./hooks/useNpmAPi";
 
 export function App() {
   const { skills, stats, sosmed, experience, projects } = useListing()
@@ -17,8 +17,8 @@ export function App() {
   if (githubLoading || npmLoading) return <Loading loading={githubLoading || npmLoading} />
   return (
     <>
-      <Container class={'w-full'}>
-        <div class={'grid md:grid-cols-3 grid-cols-1 justify-between gap-8 w-[1200px] h-full'}>
+      <Container class={'w-full overflow-x-hidden'}>
+        <div class={'grid lg:grid-cols-3 sm:grid-cols-2 justify-between gap-8 w-[1200px] h-full'}>
           <div class={'w-auto mx-auto flex flex-col h-full p-3 gap-10'}>
             <div class={'flex flex-row items-center space-x-8 w-full'}>
               <span class={'relative w-1/3'}>
@@ -70,7 +70,7 @@ export function App() {
               })}
             </div>
           </div>
-          <div class={'w-full mx-auto flex flex-col p-3 gap-8'}>
+          <div class={'w-full mx-auto flex flex-col h-full p-3 gap-8'}>
             <div class={'w-full mx-auto flex flex-col gap-5'}>
               <div class={'flex flex-row gap-3 items-center'}>
                 <img class={'rounded-sm w-6 h-6'} src="/skills/github.png" width={20} height={20} alt="zaadevofc" />
@@ -97,9 +97,22 @@ export function App() {
                 </ScrollShadow>
               </div>
             </div>
+            <div class={'lg:hidden flex w-full mx-auto flex-col gap-5'}>
+              <div class={'flex flex-row gap-3 items-center'}>
+                <img class={'rounded-full w-7 h-7'} src={github.user.avatar_url} width={20} height={20} alt="zaadevofc" />
+                <h1 class={'font-[Bestigia] font-bold text-[20px] tracking-wider'}>My Projects</h1>
+              </div>
+              <div class={'overflow-y-auto hide-scroll w-full h-[550px]'}>
+                <ScrollShadow hideScrollBar className="w-full h-full">
+                  <div class={'grid grid-cols-1 w-full h-auto gap-2 items-center'}>
+                    {projects.map((x, i) => <ProjectCard key={x} index={i} />)}
+                  </div>
+                </ScrollShadow>
+              </div>
+            </div>
           </div>
 
-          <div class={'w-full mx-auto flex flex-col p-3 gap-8'}>
+          <div class={'hidden w-full mx-auto lg:flex flex-col p-3 gap-8'}>
             <div class={'w-full mx-auto flex flex-col gap-5'}>
               <div class={'flex flex-row gap-3 items-center'}>
                 <img class={'rounded-full w-7 h-7'} src={github.user.avatar_url} width={20} height={20} alt="zaadevofc" />

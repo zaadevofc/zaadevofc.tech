@@ -5,7 +5,7 @@ import { render } from 'preact';
 import React from 'preact/compat';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { App } from './app.tsx';
-import './index.css';
+import './styles/index.css';
 
 const queryClient = new QueryClient();
 

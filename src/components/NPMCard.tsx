@@ -2,8 +2,8 @@ import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-
 import moment from "moment";
 import { HiSpeakerphone } from "react-icons/hi";
 import { HiMiniHeart } from "react-icons/hi2";
-import useGithubAPi from "../query/useGithubAPi";
-import useNpmAPi from "../query/useNpmAPi";
+import useGithubAPi from "../hooks/useGithubAPi";
+import useNpmAPi from "../hooks/useNpmAPi";
 import Loading from "./Loading";
 
 const NPMCard = (props: any) => {

@@ -1,5 +1,5 @@
 import { Avatar, Button, Card, CardBody, CardFooter, CardHeader, Chip } from "@nextui-org/react";
-import useListing from "../query/useListing";
+import useListing from "../hooks/useListing";
 
 const ProjectCard = (props: any) => {
   const { projects } = useListing()

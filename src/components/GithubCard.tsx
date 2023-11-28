@@ -2,7 +2,7 @@ import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-
 import { FaCodeFork } from "react-icons/fa6";
 import { GoStarFill } from "react-icons/go";
 import { HiBadgeCheck } from "react-icons/hi";
-import useGithubAPi from "../query/useGithubAPi";
+import useGithubAPi from "../hooks/useGithubAPi";
 import Loading from "./Loading";
 
 const GithubCard = (props: any) => {
