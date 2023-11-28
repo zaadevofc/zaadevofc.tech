@@ -8,6 +8,7 @@ import { App } from './app.tsx';
 import './index.css';
 
 const queryClient = new QueryClient();
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         once: true
